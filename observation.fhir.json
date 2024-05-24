@@ -1,0 +1,18 @@
+{
+    "resourceType": "Observation",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "260385009",
+                "display": "Negative"
+            }
+        ],
+        "text": "Negative for Chlamydia Trachomatis rRNA"
+    },
+    "subject": {
+        "type": "Patient",
+        "display": "Tiago Melo",
+        "reference": "Patient/ID"
+    }
+}
