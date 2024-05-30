@@ -4,17 +4,15 @@
         "name": [
             {
                 "use": "official",
-                "text": "Tiago Barbosa Melo",
+                "text": "Bjarne Stroustrup",
                 "given": [
-                    "Tiago",
-                    "Barbosa"
+                    "Bjarne"
                 ],
-                "family": "Melo",
-                "prefix": ["Sr", "Mr."],
-                "suffix": ["MSc"]
+                "family": "Stroustrup",
+                "prefix": ["Sr", "Mr."]
             }
         ],
-        "birthDate": "1985-01-01",
+        "birthDate": "1950-12-30",
         "telecom": [
             {
                 "system": "phone",
@@ -33,10 +31,9 @@
             {
                 "use": "home",
                 "type": "physical",
-                "country": "Brazil",
-                "city": "São Paulo",
-                "postalCode": "98765432",
-                "state": "São Paulo",
+                "country": "Denmark",
+                "city": "Aarhus",
+                "postalCode": "87654321",
                 "line": ["256"],
                 "text": "Av Paulista. 500"
             }
