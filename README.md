@@ -134,3 +134,126 @@ Just run:
 ```bash
 curl --location 'http://localhost:8080/fhir/Patient?address=Netherlands&_format=xml'
 ```
+
+## Creating Bundle of Patients
+Just run:
+
+<details>
+<summary>Creating Bundle</summary><p>
+
+```bash
+curl --location 'http://localhost:8080/fhir' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "gender": "male",
+                "name": [
+                    {
+                        "use": "official",
+                        "text": "Dijkstra",
+                        "given": [
+                            "Edsger",
+                            "Dijkstra"
+                        ],
+                        "family": "Dijkstra",
+                        "prefix": [
+                            "Sr"
+                        ]
+                    }
+                ],
+                "birthDate": "1930-05-11",
+                "deceasedDateTime": "2002-08-06",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "mobile",
+                        "value": "+55 85 9 9999 999",
+                        "rank": 1
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": "my-mail@gmail.com",
+                        "rank": 2
+                    }
+                ],
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "physical",
+                        "country": "Netherlands",
+                        "city": "Rotterdan",
+                        "postalCode": "98765432",
+                        "line": [
+                            "256"
+                        ],
+                        "text": "Av Paulista. 500"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "gender": "male",
+                "name": [
+                    {
+                        "use": "official",
+                        "text": "Bjarne Stroustrup",
+                        "given": [
+                            "Bjarne"
+                        ],
+                        "family": "Stroustrup",
+                        "prefix": [
+                            "Sr",
+                            "Mr."
+                        ]
+                    }
+                ],
+                "birthDate": "1950-12-30",
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "mobile",
+                        "value": "+55 85 9 9999 999",
+                        "rank": 1
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": "my-mail@gmail.com",
+                        "rank": 2
+                    }
+                ],
+                "address": [
+                    {
+                        "use": "home",
+                        "type": "physical",
+                        "country": "Denmark",
+                        "city": "Aarhus",
+                        "postalCode": "87654321",
+                        "line": [
+                            "256"
+                        ],
+                        "text": "Av Paulista. 500"
+                    }
+                ]
+            },
+            "request": {
+                "method": "POST",
+                "url": "Patient"
+            }
+        }
+    ]
+}'
+```
+</details>
